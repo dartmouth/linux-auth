@@ -1,7 +1,8 @@
 ## ubuntu-pam_ldap-duo
 
 Prerequisites
-- A read-only service account (add LDAP_BIND_DN and LDAP_BIND_PASSWORD to secrets.sh)
+- A read-only service account
+- Add LDAP_BIND_PASSWORD, DUO_INTEGRATION_KEY, and DUO_SECRET_KEY to secrets.sh
 
 ```sh
 # Load secrets into environment
@@ -20,7 +21,7 @@ docker run -d \
   -e LDAP_BIND_DN="CN=InfraStaff01,OU=People,DC=kiewit,DC=dartmouth,DC=edu" \
   -e LDAP_BIND_PASSWORD="$LDAP_BIND_PASSWORD" \
   -e LDAP_URI="ldaps://onpremdc.kiewit.dartmouth.edu" \
-  -e DUO_INTEGRATION_KEY="DIXXXXXXXXXXXXXXXXXX" \
+  -e DUO_INTEGRATION_KEY="$DUO_INTEGRATION_KEY" \
   -e DUO_SECRET_KEY="$DUO_SECRET_KEY" \
   -e DUO_HOST="api-426aaf62.duosecurity.com" \
   -p 2222:22 \
