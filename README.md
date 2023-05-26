@@ -5,8 +5,8 @@ The purpose of this repository is to document examples of how to secure Linux se
 ## Examples
 
 List
-- [rocky-ldap](rocky-ldap)
-- [ubuntu-ldap](ubuntu-ldap)
+- [rocky_ldap](rocky_ldap)
+- [ubuntu_ldap](ubuntu_ldap)
 
 ## One time setup
 
