@@ -5,21 +5,21 @@ The purpose of this repository is to document examples of how to secure Linux se
 ## Examples
 
 List
-- [rocky-pam_ldap](rocky-pam_ldap)
-- [rocky-sssd](rocky-sssd)
-- [rocky-sssd-domain_joined](rocky-sssd-domain_joined)
-- [ubuntu-pam_ldap](ubuntu-pam_ldap)
-- [ubuntu-pam_ldap](ubuntu-pam_ldap-duo)
-- [ubuntu-sssd](ubuntu-sssd)
-- [ubuntu-sssd-domain_joined](ubuntu-sssd-domain_joined)
+- [rocky-ldap](rocky-ldap)
+- [ubuntu-ldap](ubuntu-ldap)
 
 ## One time setup
 
-Create a `secrets.sh` configuration file. This file will be ignored by git so you do not have to worry about it accidently being commited to this code respository. Here is an example of the file. See individual configurations to learn with environment variables are needed for each example.
+Create a `set_env.sh` configuration file. This file will be ignored by git so you do not have to worry about it accidently being commited to this code respository. Here is an example of the file. See individual configurations to learn which environment variables are needed for each example.
 
 ```sh
+export LDAP_URI='ldaps://onpremdc.kiewit.dartmouth.edu'
+export LDAP_BASE='dc=kiewit,dc=dartmouth,dc=edu'
 export LDAP_BIND_DN='CN=SERVICE_ACCOUNT,OU=People,DC=kiewit,DC=dartmouth,DC=edu'
 export LDAP_BIND_PASSWORD='REMOVED1'
+export DUO_SECRET_KEY='X1hXztPX1rb1X71x1wXkpnmXXvqXXXqqj1XoXbbXu'
+export DUO_INTEGRATION_KEY='DIXXXXXXXXXXXXXXXXXX'
+export DUO_HOST='api-XXXXXXXX.duosecurity.com'
 ```
 
 ## Misc
