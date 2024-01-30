@@ -1,4 +1,4 @@
-FROM ubuntu:22.10
+FROM ubuntu:22.04
 
 RUN apt update \
  && DEBIAN_FRONTEND=noninteractive apt -y install openssh-server sudo nscd libnss-ldapd libpam-ldapd libuser curl gpg vim

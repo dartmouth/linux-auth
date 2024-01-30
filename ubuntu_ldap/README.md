@@ -10,7 +10,7 @@ cd ubuntu_ldap
 source ../set_env.sh
 
 # Build container
-docker build -t ubuntu_ldap .
+docker build --platform linux/amd64 -t ubuntu_ldap .
 
 # Run a container
 docker rm -f ubuntu_ldap
